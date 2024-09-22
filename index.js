@@ -42,10 +42,11 @@ app.post("/api/bfhl", (req, res) => {
         allNo.push(elem);
       // if (alphabets.includes(elem.toUpperCase()) && elem.toUpperCase() > highestAlpha.toUpperCase())
       //   highestAlpha = elem;
-      alphabets.map (alpha => {
-        if ((alpha.toLowerCase() == elem) && (alpha.toLowerCase() > highestAlpha))
-          highestLowerAlpha = elem;
-      })
+      if (elem.length === 1 && elem >= 'a' && elem <= 'z') {
+        if (elem > highestLowerAlpha) {
+            highestLowerAlpha = elem;
+        }
+    }
     })
     res.json({
       is_success: true,
