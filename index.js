@@ -64,7 +64,11 @@ app.post("/api/bfhl", (req, res) => {
   })
 
 app.get("/api/bfhl", (req, res) => {
-    const responseJSON = { "operation_code": 1 }
+    const responseJSON = { "operation_code": 1, 
+    "user_id": "samanyu_vyas_10092003",
+    "email": "sn8319@srmist.edu.in",
+    "roll_number": "RA2111003020269",
+  }
     res.status(200).send(responseJSON);
 });
 
